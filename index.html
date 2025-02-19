@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Vladimir Sergeev</title>
+    <title>Портфолио | Сергей Владимиров</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
-        <section class="left">
-            <img src="your-photo.jpg" alt="Vladimir Sergeev">
-            <h1>Vladimir Sergeev</h1>
-            <p>Java Developer | Telegram Bots | Minecraft Mods</p>
-            <p>Email: your.email@example.com</p>
-            <p>GitHub: <a href="https://github.com/SergeevVladimirValentinovich">SergeevVladimirValentinovich</a></p>
-        </section>
+        <!-- Левая часть: Фото, контакты -->
+        <aside class="sidebar">
+            <img src="your-photo.jpg" alt="Ваше фото" class="profile-photo">
+            <h1>Сергей Владимиров</h1>
+            <p>Java-разработчик | Telegram-боты | Minecraft-моды</p>
+            <ul class="contacts">
+                <li>📧 Email: your-email@gmail.com</li>
+                <li>🔗 VK: <a href="https://vk.com/vov4ik_serg">vk.com/vov4ik_serg</a></li>
+                <li>💻 GitHub: <a href="https://github.com/SergeevVladimirValentinovich">GitHub</a></li>
+            </ul>
+        </aside>
         
-        <section class="right">
-            <h2>Skills</h2>
-            <canvas id="skillsChart"></canvas>
-            <script>
-                const ctx = document.getElementById('skillsChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Java', 'Spring Boot', 'Telegram Bots', 'Minecraft Mods'],
-                        datasets: [{
-                            data: [80, 60, 70, 50],
-                            backgroundColor: ['#4CAF50', '#FF9800', '#2196F3', '#9C27B0']
-                        }]
-                    }
-                });
-            </script>
-        </section>
+        <!-- Правая часть: Навыки, проекты -->
+        <main class="content">
+            <section class="skills">
+                <h2>Навыки</h2>
+                <div class="skill-chart">
+                    <div class="chart" data-percent="80">Java</div>
+                    <div class="chart" data-percent="70">Spring</div>
+                    <div class="chart" data-percent="60">Telegram API</div>
+                </div>
+            </section>
+            
+            <section class="progress">
+                <h2>Прогресс обучения</h2>
+                <div class="circle-chart" data-percent="25">Skillbox 25%</div>
+            </section>
+        </main>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
