@@ -1,45 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сергеев Владимир | Портфолио</title>
+    <title>Portfolio - Vladimir Sergeev</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Привет! Я Сергеев Владимир</h1>
-        <p>Java-разработчик, создаю приложения, игры и модификации.</p>
-    </header>
-
-    <section class="about">
-        <h2>Обо мне</h2>
-        <p>Я с города Екатеринбурга, учился в УрФУ (ИМКН), прохожу курс Java-разработчика на Skillbox.</p>
-    </section>
-
-    <section class="skills">
-        <h2>Навыки</h2>
-        <ul>
-            <li>Java, C++, C#, Pascal</li>
-            <li>IntelliJ IDEA, Android Studio</li>
-            <li>Разработка Telegram-ботов, модов для Minecraft</li>
-        </ul>
-    </section>
-
-    <section class="projects">
-        <h2>Проекты</h2>
-        <ul>
-            <li>📌 Список дел (консольное приложение)</li>
-            <li>📌 Сборщик email-адресов</li>
-            <li>📌 Консольные шахматы</li>
-        </ul>
-    </section>
-
-    <section class="contacts">
-        <h2>Контакты</h2>
-        <p>📞 +7 (922) 605-11-32 (Telegram, WhatsApp)</p>
-        <p>🔗 <a href="https://vk.com/vov4ik_serg">VK</a> | <a href="https://github.com/SergeevVladimirValentinovich">GitHub</a></p>
-    </section>
-
+    <div class="container">
+        <section class="left">
+            <img src="your-photo.jpg" alt="Vladimir Sergeev">
+            <h1>Vladimir Sergeev</h1>
+            <p>Java Developer | Telegram Bots | Minecraft Mods</p>
+            <p>Email: your.email@example.com</p>
+            <p>GitHub: <a href="https://github.com/SergeevVladimirValentinovich">SergeevVladimirValentinovich</a></p>
+        </section>
+        
+        <section class="right">
+            <h2>Skills</h2>
+            <canvas id="skillsChart"></canvas>
+            <script>
+                const ctx = document.getElementById('skillsChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Java', 'Spring Boot', 'Telegram Bots', 'Minecraft Mods'],
+                        datasets: [{
+                            data: [80, 60, 70, 50],
+                            backgroundColor: ['#4CAF50', '#FF9800', '#2196F3', '#9C27B0']
+                        }]
+                    }
+                });
+            </script>
+        </section>
+    </div>
 </body>
 </html>
