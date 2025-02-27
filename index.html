@@ -3,92 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио - Владимир Сергеев</title>
+    <title>Портфолио | Сергеев Владимир</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            background-color: #1e1e1e;
-            color: white;
-        }
-        .container {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .sidebar {
-            width: 30%;
-            background: #2a2a2a;
-            padding: 20px;
-            text-align: center;
-        }
-        .sidebar img {
-            width: 150px;
-            border-radius: 50%;
-        }
-        .contacts a {
-            color: #00ffcc;
-            text-decoration: none;
-        }
-        .content {
-            width: 70%;
-            padding: 20px;
-        }
-        .progress-bar {
-            background: #444;
-            width: 100%;
-            height: 20px;
-            border-radius: 10px;
-            margin-top: 10px;
-            overflow: hidden;
-        }
-        .progress-fill {
-            background: #00ffcc;
-            height: 100%;
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
-            <img src="MyPhoto.jpg" alt="Мое фото" class="avatar">
-            <h1>Владимир Сергеев</h1>
-            <p>Java-разработчик</p>
-            <ul class="contacts">
-                <li>📧 <a href="mailto:email@example.com">email@example.com</a></li>
-                <li>🔗 <a href="https://github.com/SergeevVladimirValentinovich" target="_blank">GitHub</a></li>
-                <li>📍 Россия</li>
-            </ul>
-        </aside>
-        
-        <main class="content">
-            <section class="about">
-                <h2>Обо мне</h2>
-                <p>Я Java-разработчик, занимаюсь созданием ботов для Telegram, разработкой модов для Minecraft и других проектов.</p>
-            </section>
+        <div class="left">
+            <img src="profile.jpg" alt="Фото">
+            <h1>Сергеев Владимир</h1>
+            <p class="contact"><strong>Телефон:</strong> +7 (922) 605-11-32</p>
+            <p class="contact"><strong>Email:</strong> mixprofix@gmail.com</p>
+            <p class="contact"><strong>GitHub:</strong> <a href="https://github.com/SergeevVladimirValentinovich" target="_blank">github.com/SergeevVladimirValentinovich</a></p>
+            <p class="contact"><strong>Telegram:</strong> @vvs_ekb</p>
+        </div>
+        <div class="right">
+            <h2>О себе</h2>
+            <p>Всем привет! Я Java-разработчик, мне 30 лет, в данный момент живу в Екатеринбурге. Я разрабатываю различные проекты, а также создаю Telegram-ботов, моды для Minecraft. Обучаюсь на Skillbox.</p>
             
-            <section class="skills">
-                <h2>Навыки</h2>
-                <ul>
-                    <li>☕ Java</li>
-                    <li>🖥️ Spring Boot</li>
-                    <li>🤖 Telegram Bots</li>
-                    <li>🎮 Minecraft Modding</li>
-                </ul>
-            </section>
-            
-            <section class="progress">
-                <h2>Прогресс обучения</h2>
-                <p>Skillbox: 25%</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 25%;"></div>
+            <h2>Навыки</h2>
+            <div class="skills">
+                <div class="skill">
+                    <span>Java</span>
+                    <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
                 </div>
-            </section>
-        </main>
+                <div class="skill">
+                    <span>Spring</span>
+                    <div class="progress"><div class="progress-bar" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill">
+                    <span>SQL</span>
+                    <div class="progress"><div class="progress-bar" style="width: 50%;"></div></div>
+                </div>
+            </div>
+
+            <h2>Опыт работы</h2>
+            <ul class="experience">
+                <li><strong>Java-разработчик</strong> — личные проекты, боты, моды</li>
+                <li><strong>Обучение</strong> — Skillbox, 25% завершено</li>
+            </ul>
+
+            <h2>Проекты</h2>
+            <ul class="projects">
+                <li><a href="#">To-Do List App</a> — консольное приложение для задач</li>
+                <li><a href="#">Email Collector</a> — сбор и проверка email-адресов</li>
+                <li><a href="#">Консольные шахматы</a> — шахматная игра на Java</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
