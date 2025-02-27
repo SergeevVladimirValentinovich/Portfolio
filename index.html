@@ -3,41 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио | Сергей Владимиров</title>
+    <title>Портфолио - Владимир Сергеев</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .sidebar {
+            width: 30%;
+            background: #2a2a2a;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .contacts a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+        }
+        .progress-bar {
+            background: #444;
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: #00ffcc;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <!-- Левая часть: Фото, контакты -->
         <aside class="sidebar">
-            <img src="your-photo.jpg" alt="Ваше фото" class="profile-photo">
-            <h1>Сергей Владимиров</h1>
-            <p>Java-разработчик | Telegram-боты | Minecraft-моды</p>
+            <img src="img/photo.jpg" alt="Мое фото" class="avatar">
+            <h1>Владимир Сергеев</h1>
+            <p>Java-разработчик</p>
             <ul class="contacts">
-                <li>📧 Email: your-email@gmail.com</li>
-                <li>🔗 VK: <a href="https://vk.com/vov4ik_serg">vk.com/vov4ik_serg</a></li>
-                <li>💻 GitHub: <a href="https://github.com/SergeevVladimirValentinovich">GitHub</a></li>
+                <li>📧 <a href="mailto:email@example.com">email@example.com</a></li>
+                <li>🔗 <a href="https://github.com/SergeevVladimirValentinovich" target="_blank">GitHub</a></li>
+                <li>📍 Россия</li>
             </ul>
         </aside>
         
-        <!-- Правая часть: Навыки, проекты -->
         <main class="content">
+            <section class="about">
+                <h2>Обо мне</h2>
+                <p>Я Java-разработчик, занимаюсь созданием ботов для Telegram, разработкой модов для Minecraft и других проектов.</p>
+            </section>
+            
             <section class="skills">
                 <h2>Навыки</h2>
-                <div class="skill-chart">
-                    <div class="chart" data-percent="80">Java</div>
-                    <div class="chart" data-percent="70">Spring</div>
-                    <div class="chart" data-percent="60">Telegram API</div>
-                </div>
+                <ul>
+                    <li>☕ Java</li>
+                    <li>🖥️ Spring Boot</li>
+                    <li>🤖 Telegram Bots</li>
+                    <li>🎮 Minecraft Modding</li>
+                </ul>
             </section>
             
             <section class="progress">
                 <h2>Прогресс обучения</h2>
-                <div class="circle-chart" data-percent="25">Skillbox 25%</div>
+                <p>Skillbox: 25%</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 25%;"></div>
+                </div>
             </section>
         </main>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
